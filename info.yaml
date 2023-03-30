@@ -1,0 +1,6 @@
+info:
+  name: ServerInfo
+  author: IVM-USER
+  version: 1.0.0
+  description: Module showing server characteristics and server load
+  src_url: https://github.com/IVM-USER/ServerInfo
