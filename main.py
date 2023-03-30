@@ -23,16 +23,24 @@ def find_lib(lib: str) -> str:
 def escape_html(txt: str) -> str:
     return txt.replace("<", "").replace(">", "")
 
+serverinfo = self.S["serverinfo"]["serverinfo"]
+used = self.S["serverinfo"]["used"]["used"]
+cores = self.S["serverinfo"]["used"]["cores"]
+dist = self.S["serverinfo"]["dist"]["dist"]
+kernel = self.S["serverinfo"]["dist"]["kernel"]
+arch = self.S["serverinfo"]["dist"]["arch"]
+os = self.S["serverinfo"]["dist"]["os"]
+python = self.S["serverinfo"]["python"]["python_libs"]
 
 ssinfo = (
-    "<b><u>👾 Server Info:</u>\n\n"
-    "<u>🗄 Used resources:</u>\n"
-    "    CPU: {} Cores {}%\n"
+    f"<b><u>{serverinfo}</u></b>\n\n"
+    f"<u>{used}</u>\n"
+    "    CPU: {}" cores "{}%\n"
     "    RAM: {} / {}MB ({}%)\n\n"
-    "<u>🧾 Dist info</u>\n"
-    "    Kernel: {}\n    Arch: {}\n"
+    f"<u>{dist}</u>\n"
+    "    "kernel"{}\n"    arch"{}\n"
     "    OS: {}\n\n"
-    "<u>📦 Python libs:</u>\n"
+    f"<u>{python}</u>\n"
     "    Pyrogram: {}\n"
     "    Aiohttp: {}\n"
     "    GitPython: {}\n"
